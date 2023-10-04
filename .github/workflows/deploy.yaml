@@ -1,0 +1,21 @@
+name: Create server
+on:
+  push:
+    branches: [ master ]
+
+env:
+  ID_RSA: "${{ secrets.ID_RSA }}"
+  TF_token: "${{ secrets.TF_token }}"
+
+jobs:
+  deploy:
+    name: Create server
+    runs-on: ubuntu-latest
+    steps:
+      - name: install ssh keys
+        # check this thread to understand why its needed:
+        # <https://stackoverflow.com/a/70447517>
+        run: |
+          eval $(ssh-agent -s)
+          ssh-add <(echo "${{ secrets.ID_RSA }}")
+          make terraform-plan
