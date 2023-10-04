@@ -1,6 +1,9 @@
 name: Create server
 on:
   push:
+    paths-ignore:
+      - 'terraform/terraform-nhl.tfstate'
+      - 'terraform/terraform-nhl.tfstate.backup'
     branches: [ main ]
 
 env:
