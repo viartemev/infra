@@ -12,14 +12,8 @@ endif
 
 TF_DIR := $(CWD)/terraform
 
-
 ANSIBLE_DIR := $(CWD)/ansible
 ANSIBLE_CONFIG := $(ANSIBLE_DIR)/ansible.cfg
-
-GITLAB_PROJECT_ID ?= 82
-GITLAB_STATE_NAME ?= GitLab
-GITLAB_USERNAME ?= varyumin
-GITLAB_ACCESS_TOKEN ?= 7sJZyS4LUTzJNz6uGL32
 
 export
 
@@ -41,8 +35,6 @@ terraform-get: ## terraform get -update
 terraform-plan: ## terraform plan
 	@cd '$(TF_DIR)' && \
      terraform plan
-
-
 
 .PHONY: terraform-apply
 terraform-apply: ## terraform apply -auto-approve
