@@ -1,3 +1,8 @@
+variable "token" {
+  type = string
+  default = ""
+}
+
 variable "network" {
   type = map
   default = {

@@ -1,4 +1,7 @@
 terraform {
+  backend "local" {
+    path = "terraform-nhl.tfstate"
+  }
   required_providers {
     hcloud = {
       source = "hetznercloud/hcloud"
