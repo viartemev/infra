@@ -15,8 +15,6 @@ jobs:
     name: Create server
     runs-on: ubuntu-latest
     steps:
-      - name: install ssh keys
+      - name: Init Server
         run: |
-          eval $(ssh-agent -s)
-          ssh-add <(echo "${{ secrets.ID_RSA }}")
           make terraform-plan
