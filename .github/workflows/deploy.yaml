@@ -1,7 +1,7 @@
 name: Create server
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   ID_RSA: "${{ secrets.ID_RSA }}"
