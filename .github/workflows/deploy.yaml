@@ -17,4 +17,6 @@ jobs:
     steps:
       - name: Init Server
         run: |
+          ls -la
+          make help
           make terraform-plan
