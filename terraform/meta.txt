@@ -1,0 +1,37 @@
+#cloud-config
+
+package_update: true
+package_upgrade: true
+packages:
+  - ca-certificates
+  - curl
+  - gnupg
+  - git
+  - timezone
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin
+
+users:
+  - name: varyumin
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC45CDJ8RwqtugROTACCq58RcMVhSTY6kabPKtD5GmwWgNZZLv/BUx/4TKh6EHMQ0+4vuEyMK2/bGb0LzXRJpyJXUA+q6C28yDa0GxyIUPvjaM2QR7bJmywlpR1Hf4ym0s4oYdXZiPzX010TW+w3yg+z1UOn2ACM3aUD9TLSue/7RV00YX7mmi3LwHIN70HZMnmOGtupY5SycJA+b2+6/gkNbQP/vU/gkCsR2hPhdr0p3l276cGxkDORQxXVLB7CZ/KiFoNZlotRbBX8VXgtbcyIuR0paT/Ez0EEnpNgoyv3gD8Ud93+Kr1XNNOL0GraGcRdWtrXMHKkU5pZuWSA5WD v.a.ryumin@MacBookProvaryumin.local
+
+  - name: viartemev
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDG82UgJ2+ohjJJCdwoPsNzZAeFOvB8cGoM0hoAZW7UHPSW2sW0vr+2aA5vkWVJasE2Dv/A6masQQeo9GZZZlP3N5/yj1eX2ThLF9fJOUy44m3BBvgLjlaN0V1in8RKWGqgAo55uBGZZ9iRIrdwkeLRGn0XRoBTGcwmDFOXEE01enJGtoachhWOw+0Rhub/8Lb+Y59eEYfZtx6hsywRFP+IlIxD0rMCjdJ4OTu/uu4m0QT7oIy4aIJVGQe8PrViqyLlvt0fhol3Hjjz6Xzuid9F8pX/+zXGfhhyMEtlFkYRq5XSu2UCTJS0k6zi62Ry06IAS+Bodld3F4gkkjQAHumihRxHS4kMMXTJ8evOOiu2AH0v9zl4WNjAfeXXWBbXFC4NwiS0wLrSycQetzLjWScqfX0q0oLGtXcSd1iEIdgdhDiva5SjT7zqvCyVhmen0DcqICGsjWzNCbge0GP76NSLh4psBMnOmUZjVrmcRoYX3x7tD22lmcFpy5c1kTTvDO0= viartemev@gmail.com
+
+  - name: nhl
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvkeg5cXCH5uv1nhTvqMrRPSbInyHFlSrlf4gT52G18ifFpHoyKzS1Svf0ryd2mJnu/LwaEMCdijj3syjhNJOONG8YEiTrWTpVnl9lk1x1ZcENaGJ/ICv3fOYlGDwyTucCW+UsceLyFpWGRjyabmbE0ViIY9rVvK6sG6/UHNePp+QZQIyvejXNW0kjD6wM+PBfmspBfRP2zrJNZ7CRKldeYIgu3FXAiJul3VopZzQ7zd9NTY80UIxyKe5e5pm90EGKyecGU9c1CgPSR8t2GCY5zDiiKZ42BA0pw6jvv4kVs0LojkRWoE8rrfGhlLOAF6FKw6vIjgaCWXIPYxSkvBEWAfzBcap5rtfdoYnd6gU/NqT75yxk7svyz0S6PdwOqp9Kmat3Ngt+PD2YKydNhyF8auItAiEaf0eHgpUDHFtPrgf8Q3xj/kDGGSDpPV0d920SPpkUluSz7NGH2e+tFtYl3wI3230OqP8kq00DzwuVzHKgQu22tRWj8LxPYGZWhXSTFhAYvqDPUlkU0uBh2KaVrtae+g6txI9u4Tmk4Vym7FyOT01KhamSRgyyCMzRI48sFqnoERWymtKselRnerHKN5YJQjbJQNr0NQs4wQiApvt5HUPqmF1l+pYMB0UT9cgZwvSLqXs9/snlWnzcVzN1LhMbRzT4Q6JrMYILEz0h0w== viartemev@gmail.com
