@@ -7,4 +7,4 @@
 out
 gen
 terraform/secret.*
-ansible/ssh/*
+ansible/ssh/id_rsa
